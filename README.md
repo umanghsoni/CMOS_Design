@@ -265,4 +265,32 @@ Analyse effect of VGS and VDS on ID — use multiple voltage values — device s
 
 <img width="629" height="184" alt="image" src="https://github.com/user-attachments/assets/b657f191-c27e-47d5-93d7-1d26a89a5f04" />
 
+### 8.	Pinch-off region condition
+
+Channel voltage at drain-end: VGS – VDS
+
+Channel voltage > Vt to form surface inversion – requirement to turn on the device 
+
+<img width="464" height="316" alt="image" src="https://github.com/user-attachments/assets/8ce267fc-8737-4217-9961-1fc9c977e81e" />
+
+Varying the VDS while keeping VGS and Vt constant – feed to SPICE simulator 
+
+Important to understand when channel voltage (VGS – Vt) < Vt 
+
+As long as channel voltage (VGS – Vt)  > Vt – valid conducting channel exist in between source and drain
+
+<img width="589" height="286" alt="image" src="https://github.com/user-attachments/assets/44834c2f-ec92-47b1-9597-0d656d37b800" />
+
+When channel voltage (VGS – Vt)  = Vt – two different scenario at source end and drain end –Surface inversion at source end has already happened as channel voltage at source end is higher than Vt – Surface inversion is just happened as channel voltage at Drain end is exactly at Vt – mix and max of two concepts -  channel will start disappear from the drain side – this phenomena is known as pinch-off situation   
+
+<img width="609" height="302" alt="image" src="https://github.com/user-attachments/assets/de41f7f0-e1d2-4768-8ebc-ad6888abc1f5" />
+
+
+<img width="352" height="352" alt="image" src="https://github.com/user-attachments/assets/c50ea869-2672-471a-acb3-009af5a9a653" />
+
+On or After the pinch-off situation – further increase in VDS cause MOSFET to drive in saturation - current will not stop flowing – linearity will change 
+
+<img width="678" height="333" alt="image" src="https://github.com/user-attachments/assets/b2792174-c8bb-46a3-b742-d7f497acd298" />
+
+Pinch-off situation – converted in model or current equation – feed the SPICE simulator
 

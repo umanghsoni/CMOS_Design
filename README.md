@@ -1,4 +1,4 @@
-# CMOS_Design
+# Basics of NMOS Drain current (Id) vs Drain-to-source Voltage (Vds)
 
 ## Introduction to Circuit Design and SPICE Simulation
 ### 0.	Why do we need SPICE simulations?
@@ -225,15 +225,37 @@ As the channel ends have potential difference, drift current is considered – c
 
 Require to put value of velocity of charge, available charge – Integrate over whole channel width to have drain current value
 
+### 6.	Drain current model for linear region of operation
 
+Velocity of the charge carrier – not constant due to voltage gradient in the channel 
 
+<img width="384" height="258" alt="image" src="https://github.com/user-attachments/assets/3c50f840-a44e-4f24-bd84-624807d1c977" />
 
+dV – change in the channel voltage – can go from 0 to VDS
 
+dX – change in the channel – can go from 0 to L
 
+<img width="386" height="121" alt="image" src="https://github.com/user-attachments/assets/f9ee50ba-e390-4a54-b6b4-aa3ff3bb0fba" />
 
+By Integrating over respective ranges in RHS and LHS
 
+<img width="355" height="187" alt="image" src="https://github.com/user-attachments/assets/a300a703-3da6-4acd-9bd9-6e954a4a5a2f" />
 
+Equation – model of MOSFET - µn, Cox, W/L, kn’, kn – Constant - technological parameter – model parameter – require to pass to SPICE simulation to computer drain current
 
+We can’t say that Id is in linear region as Id is quadratic function of Vds. 
+
+Let us put the values in the derived equation
+
+<img width="642" height="173" alt="image" src="https://github.com/user-attachments/assets/be637b7a-8ed0-49a1-8d53-a51a91692bc6" />
+
+(Vds)2 is almost zero when Vds <= (Vgs-Vt) 
+
+Condition for the linear region - Vds <= (Vgs-Vt)
+
+<img width="322" height="75" alt="image" src="https://github.com/user-attachments/assets/b87c5bc7-782b-4201-8946-e570f69306e9" />
+
+As long as condition is satisfied – Id is said to be linear function of Vds – Small value of Vds generally satisfy this condition
 
 
 

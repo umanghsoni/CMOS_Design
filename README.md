@@ -64,7 +64,7 @@ If any pair is not found – Interpolation can be used to find the nearest the e
 
 Need of SPICE Simulation + Circuit Design + Characterizing of PMOS/NMOS
 
-## 1.	Introduction to basic element in Circuit design – NMOS
+### 1.	Introduction to basic element in Circuit design – NMOS
 
 NMOS – Basic Circuit element – 4 terminals – build using P substrate 
 
@@ -86,7 +86,7 @@ When +VGS is given – Metal plate – become positive charge – device forms 2
 
 <img width="606" height="313" alt="image" src="https://github.com/user-attachments/assets/361af686-e0c5-4d20-a51b-ebf3cb137ff3" />
 
-## 2.	Strong inversion and threshold voltage
+### 2.	Strong inversion and threshold voltage
 
 When +VGS is given – accumulation of negative immobile ions in the depletion region under the gate – Besides – depletion region is formed under the source and drain region 
 
@@ -117,7 +117,7 @@ Consider the VSB is positive – wider depletion region near the source region t
 <img width="377" height="302" alt="image" src="https://github.com/user-attachments/assets/a69bc3c6-9b9b-4cd6-a996-d1c024606ae8" />
 
 
-## 3.	Threshold voltage with positive substrate potential
+### 3.	Threshold voltage with positive substrate potential
 
 Two situations – (1) VGS with VSB = 0V (2) VGS with VSB = +VE voltage 
 

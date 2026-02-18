@@ -257,6 +257,12 @@ Condition for the linear region - Vds <= (Vgs-Vt)
 
 As long as condition is satisfied – Id is said to be linear function of Vds – Small value of Vds generally satisfy this condition
 
+### 7.	SPICE conclusion to resistive operation
 
+Requires to see the impact of Vgs and Vds on Id when both are varied – How the device behave when these two voltages are getting changed
+
+Analyse effect of VGS and VDS on ID — use multiple voltage values — device stays in linear region when VDS < (VGS − Vt) — fix VGS — sweep VDS from 0 to (VGS − Vt) — compute ID using linear-region equation — verify ID–VDS curves with SPICE simulations
+
+<img width="629" height="184" alt="image" src="https://github.com/user-attachments/assets/b657f191-c27e-47d5-93d7-1d26a89a5f04" />
 
 

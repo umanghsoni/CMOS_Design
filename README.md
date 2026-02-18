@@ -157,6 +157,75 @@ SPICE Simulation – feed the parameter that represent particular NMOS – get I
 
 Reached to the threshold voltage – Observe resistive operation when (1) When increases VGS above threshold (2) When VDS is applied
 
+## NMOS resistive region and saturation region of operation
+
+### 4.	Resistive region of operation with small drain-source voltage
+
+MOS Transistor operates – 3 regions – when VGS < Vt : Cut-off region 
+                                                
+Threshold voltage: minimum VGS that creates the strong inversion under the GATE between the Drain and Source 
+
+Observe when VGS > Vt
+
+<img width="668" height="411" alt="image" src="https://github.com/user-attachments/assets/0d114e43-ff3a-4f89-a302-3613bf6defb8" />
+
+<img width="591" height="62" alt="image" src="https://github.com/user-attachments/assets/014754ad-bfa9-4874-844f-25fa5f1079a5" />
+
+Assume the case when VDS is also given
+
+ <img width="569" height="33" alt="image" src="https://github.com/user-attachments/assets/e27943d1-63e6-4fa1-965d-56067264278c" />
+
+ <img width="474" height="352" alt="image" src="https://github.com/user-attachments/assets/80f02cbb-a369-4fce-936f-1ab756162fd9" />
+
+ Voltage difference (Potential gradient) between the ends of the channel – one end connected to the source which is grounded – other end connected to Drain connected to +VE supply voltage 
+
+ Voltage across the channel in the presence of VDS is not constant – was constant when VDS was 0
+
+<img width="490" height="341" alt="image" src="https://github.com/user-attachments/assets/37349ef7-94d7-45c0-9d9e-203ba75fdb89" />
+
+Voltage in channel is the function of distance (x) – At any point, voltage in the channel (In the presence of VDS) – Gate-to-Channel voltage is VGS-V(x)
+
+### 5.	Drift current theory
+
+Effective channel voltage at any point in the channel: VGS – V(X)
+
+When X = 0 (source End) --> V(X) = 0
+
+When X is considered at Drain end --> V(X) = VDS
+
+<img width="493" height="342" alt="image" src="https://github.com/user-attachments/assets/e17f6882-e433-4cde-ad7a-c6b2724af678" />
+
+Effective channel voltage – Ranges from 1V to 0.95V – Gradient – goes from higher (source) to lower (drain) 
+
+ VGS > Vt  – create the equivalent amount of induced charge in the channel (When VDS = 0V)
+
+ <img width="271" height="30" alt="image" src="https://github.com/user-attachments/assets/46568dfd-7e48-4515-ad54-41a6b6580aa1" />
+
+ When VDS is connected to supply and VGS > Vt, induced charge at any point in the channel  
+
+<img width="278" height="84" alt="image" src="https://github.com/user-attachments/assets/b5c9c834-62f1-473d-995f-8758e9e84136" />
+
+Current Derivation
+
+<img width="345" height="197" alt="image" src="https://github.com/user-attachments/assets/d0c0592e-e1be-408c-b848-bb8e2f8340c6" />
+
+tox = constant - based on the technology node – example – 100 nm node – decided by foundary
+
+eox = constant 
+
+these are fed to SPICE simulation
+
+Two types of current – diffusion current – Drift current 
+
+As the channel ends have potential difference, drift current is considered – charge carrier flows from source to drain 
+
+<img width="434" height="108" alt="image" src="https://github.com/user-attachments/assets/7310039b-d78d-4b85-af72-c4fcfee68b3c" />
+
+<img width="940" height="509" alt="image" src="https://github.com/user-attachments/assets/65bb5f2e-a4f1-4c0f-ab38-b85b4a479402" />
+
+Require to put value of velocity of charge, available charge – Integrate over whole channel width to have drain current value
+
+
 
 
 

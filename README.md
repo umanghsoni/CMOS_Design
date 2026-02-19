@@ -372,6 +372,37 @@ Next to define the technological file for the constant of the model
 
 ### 12.	Define technology parameters
 
+Netlist file – nmos – particular device – having its own models 
+
+<img width="453" height="110" alt="image" src="https://github.com/user-attachments/assets/be46f8b3-952c-4a0c-a026-2c82b1d70d36" />
+
+nmos – when plug-in SPICE engine/simulator understand – from when it requires to picked – what are the constants/model parameters for the nmos – based on the constants it, evaluate threshold voltage and drain current
+
+<img width="313" height="339" alt="image" src="https://github.com/user-attachments/assets/edc81f6e-9946-44a1-9eab-acca458eab92" />
+
+Constants/model parameters are specific to technological node – example – 1.2µm, constants are different than other technological node – coming from the foundry – model equations for other technological node will remain almost same but equations might be modified for very small technological node
+
+<img width="606" height="249" alt="image" src="https://github.com/user-attachments/assets/65e67e37-325c-4c3d-ac47-9c12fbbaffc0" />
+
+You may have more than one devices in the netlist file
+
+<img width="425" height="132" alt="image" src="https://github.com/user-attachments/assets/c9e5f94f-260c-40f9-b433-a57ff047af14" />
+
+<img width="376" height="234" alt="image" src="https://github.com/user-attachments/assets/dcb2432f-73a9-4a5d-8890-eb4a4bbe8b83" />
+
+Save this file with .mod extension – call this .mod file in top level netlist
+
+<img width="382" height="154" alt="image" src="https://github.com/user-attachments/assets/4049e31e-bae4-40c8-9287-2ea6fde336d0" />
+
+Here, CMOS_MODELS is the section in .lib from where it finds nmos – device constants are used evaluated threshold voltage, Drain current, etc. 
+
+Anything between two set of *** is comment – will not be considered
+
+Add simulation command – means – the way it voltage level is provided -  how VGS and VDS can sweep – SPICE simulation neede
+
+<img width="591" height="233" alt="image" src="https://github.com/user-attachments/assets/e47383dc-f74b-4acf-a5e1-c75b2b1a54a7" />
+
+Require to add sweep command that tell SPICE simulator to sweep VDS for a range
 
 ### 13.	First SPICE simulation
 

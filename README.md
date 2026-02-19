@@ -322,7 +322,61 @@ In saturation region – channel voltage – (VGS – Vt) – Replacing VDS by (
 
 Above equation – constant current equation in saturation region 
 
+## Introduction to SPICE
 
+### 10.	Basic SPICE setup
+
+SPICE - Software – Simulation engine – has predefined model – requires to feed the values of input – requires to feed correct netlist – spice derive the waveform – used to calculate the delay of the cell – I & V waveforms are the backup for delay – accurate delay used to derive Static time analysis
+
+Correct set up require 
+
+Model equations represent the MOSFET device
+
+<img width="490" height="277" alt="image" src="https://github.com/user-attachments/assets/2ea5cf80-e0ca-4486-a9e0-34d580963d28" />
+
+Technological Constants (λ, γ, Vto, kn’) in the equations – coming from the foundry - based on 180nm node or 1.2 µm node – each technological node has unique value – these values require to provide to SPICE engine in terms of model files – these values should be accurate to have correct current and voltage
+
+<img width="645" height="290" alt="image" src="https://github.com/user-attachments/assets/51d162a7-fff5-4f13-8cda-66c75ba63b24" />
+
+SPICE Netlist – feed to SPICE engine in special format with certain syntax
+
+<img width="426" height="198" alt="image" src="https://github.com/user-attachments/assets/7b7018c4-b447-4c10-af21-18774ebc9a50" />
+
+Protection resistor to prevent the Gate – Two voltage supplies require to vary in order to get current voltage characteristics in a single shot using the SPICE Simulation  
+
+### 11.	Circuit description in SPICE syntax
+
+SPICE – own its syntax
+
+Netlist – define the node – any component must be in between two nodes – name the nodes – no restriction in naming the nodes – can be text or numerical values
+
+<img width="668" height="253" alt="image" src="https://github.com/user-attachments/assets/5061f06d-de12-47fc-a808-8e9f0d29df6c" />
+
+<img width="523" height="56" alt="image" src="https://github.com/user-attachments/assets/0771ce34-b19d-44fd-8de6-61de55115b14" />
+
+Anything starts with M is recognised as MOSFET with sequence of Drain, Gate, Source, Substrate
+
+nmos – name coming from the technology file – exact name – followed by W and L
+
+Anything starts with R is recognised as resistor, Anything starts with V is recognised as voltage source - 
+
+<img width="384" height="64" alt="image" src="https://github.com/user-attachments/assets/aa9a2850-a695-40a5-ad1a-d8eef93f6cb4" />
+
+For voltage source – sequence is important – positive terminal, negative terminal
+
+<img width="534" height="130" alt="image" src="https://github.com/user-attachments/assets/6f4e9702-d6e9-433c-bdac-77f348ac973d" />
+
+Netlist – represent the MOSFET
+
+Next to define the technological file for the constant of the model
+
+### 12.	Define technology parameters
+
+
+### 13.	First SPICE simulation
+
+
+### 14.	SPICE Lab with sky130 models
 
 
 

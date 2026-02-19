@@ -294,3 +294,37 @@ On or After the pinch-off situation – further increase in VDS cause MOSFET to 
 
 Pinch-off situation – converted in model or current equation – feed the SPICE simulator
 
+### 9.	Drain current model for saturation region of operation
+
+On or After the pinch-off situation – further increase in VDS cause MOSFET to drive in saturation – voltage over the channel – constant – (VGS – Vt) – no dependency on VDS
+
+Saturation region – channel voltage remains constant = (VGS – Vt) 
+
+Linear region – channel voltage depends on VDS = (VGS – V(X))
+
+Effective channel length is smaller than effective gate length 
+
+Effective channel length – modulated by VDS
+
+<img width="450" height="336" alt="image" src="https://github.com/user-attachments/assets/792a70ee-aee6-4bad-bcb0-4975da651674" />
+
+Deriving the current equation in saturation region, we can have following equations from the drain current model for linear region of operation
+
+In linear region – Square of VDS – very near to 0 – Ignored
+
+In saturation region – channel voltage – (VGS – Vt) – Replacing VDS by (VGS – Vt)
+
+<img width="378" height="382" alt="image" src="https://github.com/user-attachments/assets/39150c73-1d63-46d4-af93-c2e3c15d4664" />
+
+ Seems like – Id constant current – all parameters are constant - Not true – but has dependency on L and L has dependency VDS – Accurate equation requires to incorporate the effect of VDS
+
+<img width="471" height="90" alt="image" src="https://github.com/user-attachments/assets/10ea1ee1-1c6f-449a-bdaa-84ab75a22ba2" />
+
+Above equation – constant current equation in saturation region 
+
+
+
+
+
+
+

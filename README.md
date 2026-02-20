@@ -406,6 +406,116 @@ Require to add sweep command that tell SPICE simulator to sweep VDS for a range
 
 ### 13.	First SPICE simulation
 
+<img width="702" height="292" alt="image" src="https://github.com/user-attachments/assets/655a51b8-76bc-4b85-b037-58fca76505e3" />
+
+Double click and virtual box manager window pop-up
+
+<img width="611" height="531" alt="image" src="https://github.com/user-attachments/assets/50e12ae7-9465-49f1-9511-f308d5713232" />
+
+Click on New – another window pop-up
+
+<img width="447" height="308" alt="image" src="https://github.com/user-attachments/assets/d5f138dc-9e10-440b-83d5-aef5f06638c2" />
+
+virtual box manager window pop – enter the details as per the image – Name can be as per user choice – click on finish
+
+<img width="537" height="471" alt="image" src="https://github.com/user-attachments/assets/f60ffe4d-a354-48cd-b145-b6493b970f22" />
+
+Select virtual machine 
+
+<img width="608" height="536" alt="image" src="https://github.com/user-attachments/assets/be4fa549-c946-45c7-a1c7-6c591fb6df50" />
+
+Ensure 7nm.vdi is selected in storage SATA Port 0 – click on start – new window with ubuntu machine will pop up – enter pwd – vsdiat
+
+<img width="409" height="253" alt="image" src="https://github.com/user-attachments/assets/7d85b9d6-7f44-46e0-a871-92fbd1201714" />
+
+Require to open the browser and go to the github to download the directory
+
+<img width="599" height="380" alt="image" src="https://github.com/user-attachments/assets/60cfbcfa-5c8a-43b9-b573-8086839f6840" />
+
+Open the terminal window
+
+<img width="594" height="372" alt="image" src="https://github.com/user-attachments/assets/1b478ed8-1f3d-4aa9-bfd1-54039d25b2d7" />
+
+go for git clone
+
+<img width="573" height="363" alt="image" src="https://github.com/user-attachments/assets/f513a0e6-6b93-49fc-af9b-438533c0e1cf" />
+
+Directory/folder will be saved in local PC
+
+<img width="940" height="110" alt="image" src="https://github.com/user-attachments/assets/5ca83e15-e8c9-412d-92b5-77a5a2dca19a" />
+
+Go to design folder - - > All SPICE File + folder (Has all tech files, cells and models)
+
+<img width="940" height="109" alt="image" src="https://github.com/user-attachments/assets/01f53740-ae5a-4ed9-a0bb-c30558eee100" />
+
+Let us visit the cells folder
+
+<img width="940" height="66" alt="image" src="https://github.com/user-attachments/assets/57f9ce9f-d787-45ef-ac22-34bfeee41168" />
+
+nfet_01V8, pfet_01V8 – entire workshop – these two cells will be used
+
+Let us go to nfet_01v8 folder
+
+<img width="940" height="113" alt="image" src="https://github.com/user-attachments/assets/4ffbc8b2-a91c-4684-a826-71bcb7b089ad" />
+
+Different Library files for nfet_01v8 like ff, fs, corner, etc.  
+
+Let us open library file in the viewer safe mode
+
+<img width="940" height="102" alt="image" src="https://github.com/user-attachments/assets/20b74b39-a5cf-48c5-880f-d2b87382a82d" />
+
+Will open typical corner nfet 
+
+<img width="825" height="517" alt="image" src="https://github.com/user-attachments/assets/08075eff-fac5-42f0-90dd-d1cd6cf7906e" />
+
+Model parameters coming 
+
+Corner library files have different W-L values – has already pre-characterized few W-L values – In the design file, chose W-L values which are already pre characterized – any outside value of W-L will give error 
+
+Now come out of cells directory and go to the models directory and open sky130.lib.spice file
+
+<img width="940" height="78" alt="image" src="https://github.com/user-attachments/assets/f01338f4-2ebd-4523-a1b8-7a531d892d89" />
+
+The model file has all library 
+
+<img width="586" height="423" alt="image" src="https://github.com/user-attachments/assets/703426f3-fecd-4ac6-993a-d3e3842f522e" />
+
+It contains all the library files for both nfet and pfet for different corner such as tt, ff, sf, etc
+
+This is common files for both nfet and pfet at different corner
+
+Now go back to design folder/directory and open the day1_nfet_idvds_L025_W065.spice using the vim editor
+
+<img width="940" height="95" alt="image" src="https://github.com/user-attachments/assets/199f954f-d1b7-426a-a118-287cb09f0b3b" />
+
+This command will open the file
+
+<img width="388" height="541" alt="image" src="https://github.com/user-attachments/assets/2d5827a3-c3c1-42f0-9eb8-0931f9bf8679" />
+
+Give commands to run day1 file using ngspice
+
+<img width="649" height="454" alt="image" src="https://github.com/user-attachments/assets/06889722-b636-42ad-8744-7e5c85a9a452" />
+
+Ngspice -command require to give
+
+Type: plot -vdd#branch  - will pop up one window showing the graph
+
+<img width="422" height="336" alt="image" src="https://github.com/user-attachments/assets/75f7a5c0-1e6f-4da7-a481-3f6f2ebf6292" />
+
+
+To see id value from the graph, left click and go to the terminal window to see the value
+
+<img width="461" height="183" alt="image" src="https://github.com/user-attachments/assets/584e7801-9545-474e-8930-68b83a2ddbc6" />
+
+
+
+
+
+
+
+
+
+
 
 ### 14.	SPICE Lab with sky130 models
 

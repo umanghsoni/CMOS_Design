@@ -526,3 +526,16 @@ To see id value from the graph, left click and go to the terminal window to see 
 
 ### 16.	Drain Current vs Gate Voltage for long and short channel device
 
+•	For longer node, at Vds = 2.5 (saturation region), the quadratic dependence – Id quadratic increase with increase in Vgs as per the Id equation (Consider the W/L ratio is maintained in both cases)
+
+•	Reason behind different behaviour in saturation region is velocity saturation in short channel
+
+<img width="939" height="453" alt="image" src="https://github.com/user-attachments/assets/4144cfff-f7b5-468b-a625-4efdf0508d11" />
+
+•	Anything less than 250 nm is considered as short channel device
+
+<img width="940" height="381" alt="image" src="https://github.com/user-attachments/assets/269364b3-002a-47c1-b895-372235dac861" />
+
+•	Id-Vgs with Vds = 1.8V – L = 1.2 µm (long channel) is more curved than L = 0.25 µm (short channel) – L = 0.25 µm is more linear than L = 1.2 µm – Comparison is done for same W/L
+
+<img width="940" height="347" alt="image" src="https://github.com/user-attachments/assets/97730a35-504c-4ace-ba5c-bffe42c8d864" />

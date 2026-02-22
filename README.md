@@ -507,19 +507,22 @@ To see id value from the graph, left click and go to the terminal window to see 
 
 <img width="461" height="183" alt="image" src="https://github.com/user-attachments/assets/584e7801-9545-474e-8930-68b83a2ddbc6" />
 
-
-
-
-
-
-
-
-
-
-
 ### 14.	SPICE Lab with sky130 models
 
 
 
+# Velocity Saturation and basics of CMOS inverter VTC
 
+## SPICE Simulation for lower nodes and velocity Saturation Effect
+### 15.	SPICE Simulation for lower nodes
+
+<img width="1204" height="466" alt="image" src="https://github.com/user-attachments/assets/ba831e80-bf28-484b-98af-fa110773b07d" />
+
+•	Linear Region = Resistive Region – Condition for Saturation region condition – Current model for both region – Id = 0 in Cut-off region when VGS < Vt
+
+•	If W/L ratio is constant from 1200 nm (1.2 µm) to 250 nm (0.250 µm) for different technological node – Id in saturation current seems same irrespective of the technological node but the case is not the true for the lower node
+
+•	Observable things in two technological node – Current in saturation for 1.2 µm is higher than shorter node – The gap between adjacent curves for different Vgs is almost constant for shorter node while it is not constant for 1.2 µm.
+
+### 16.	Drain Current vs Gate Voltage for long and short channel device
 

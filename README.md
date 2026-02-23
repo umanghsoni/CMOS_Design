@@ -686,23 +686,31 @@ To see id value from the graph, left click and go to the terminal window to see 
 
 <img width="611" height="474" alt="image" src="https://github.com/user-attachments/assets/f4d5fd78-ff2d-408e-9491-ee8cadf02c1c" />
 
-•	Here, IdsP is negative of IdsN. Hence Negative axis converted into positive ais. 
+•	Here, IdsP is negative of IdsN. Hence Negative axis converted into positive axis.
+
+<img width="940" height="300" alt="image" src="https://github.com/user-attachments/assets/36d0bd51-6c5e-4199-a461-a287d238ddcf" />
+
+•	When Vout = 2V, output capacitor is fully charges, there is no charging current flowing to output capacitor, there is 0 current. 
+
+•	Here, the load curve is in form of Vin, Vout and IdsN for PMOS
 
 ### 25.	Step2 & Step3 – Convert PMOS and NMOS drain-source-voltage to vout
 
+•	Load Curve for NMOS
 
+<img width="708" height="301" alt="image" src="https://github.com/user-attachments/assets/175dbf31-d78d-47ff-9763-cf6a601b4931" />
+
+•	Consider the Load curve for NMOS and PMOS and merging both two curves for VTC
 
 ### 26.	Step4 – Merge PMOS – NMOS load curves and plot VTC
 
+•	Load curves of PMOS and NMOS along with CMOS inverter circuit
 
+<img width="940" height="339" alt="image" src="https://github.com/user-attachments/assets/341cfd5e-ad6a-47f3-98a8-d7a6618d0b04" />
 
+•	Superimpose load curve of NMOS on the load curve of PMOS
 
-
-
-
-
-
-
+<img width="940" height="581" alt="image" src="https://github.com/user-attachments/assets/45106a5b-9744-4943-a1a3-fd59364340bd" />
 
 
 

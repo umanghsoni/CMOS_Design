@@ -561,3 +561,129 @@ To see id value from the graph, left click and go to the terminal window to see 
 
 <img width="939" height="379" alt="image" src="https://github.com/user-attachments/assets/0ba17800-386e-4bba-b030-2ac2f543ebbd" />
 
+### 18.	Velocity saturation drain current model
+
+•	One drain equation represents all the regions by considering the minimum of Vgt, Vds and Vdsat. 
+
+•	Earlier section, the effect of (1 + λVds) is considered in only saturation region but here it will be kept as for lower value of Vds, it will be vanished. 
+
+•	Vdsat – voltage at which device velocity saturate – technological parameter – independent of Vgs and Vds – foundry parameter – open model file when the node is less than 250 nm to check the Vdsat value
+
+<img width="515" height="186" alt="image" src="https://github.com/user-attachments/assets/ab267620-18e8-4202-9eda-ca2a5c063b15" />
+
+•	When Vgt is minimum, it implies that Vds and Vdsat is higher – device goes in saturation – applicable for bot short channel and long channel device
+
+•	When Vds is minimum – lower values of Vds, the device will operate in resistive/linear region of operation – due to smaller value of Vds, the term (1 + λVds) will be ignored – applicable for both short and long channel device
+
+<img width="527" height="101" alt="image" src="https://github.com/user-attachments/assets/caa50389-1070-4bb7-b17a-379e2c022455" />
+
+•	When Vdsat is minimum – device enter in velocity saturation – only in short channel device – when node is less than 250 nm 
+
+<img width="532" height="99" alt="image" src="https://github.com/user-attachments/assets/35d98453-9117-46ae-97c3-a6d204d4044d" />
+
+•	For short channel, peak saturation current is always lower than peak saturation current of long channel device – Compared on same W/L
+
+<img width="940" height="406" alt="image" src="https://github.com/user-attachments/assets/cc04b56c-ec62-4a88-8e25-ac04a5e13f7f" />
+
+ 
+•	Open source reference for SPICE Simulation
+
+<img width="940" height="134" alt="image" src="https://github.com/user-attachments/assets/fd9ddd51-f659-41ea-b828-6caa165af4d5" />
+
+### 19.	Labs sky130 Id-Vgs
+
+•	Go for simulation – Open the file
+
+<img width="940" height="32" alt="image" src="https://github.com/user-attachments/assets/24d8781b-e59a-4408-91a0-37bc3a3a9b96" />
+
+•	Check the code – DC Simulation is going on – Vds is varied from 0 to 1.8V with sweep of 0.2 V – Vgs is also sweep from 0 to 1.8V in range of 0.2 V
+
+<img width="485" height="413" alt="image" src="https://github.com/user-attachments/assets/32223b85-22a5-4d6d-998e-d458b7f42818" />
+
+•	Run this file using the ngspice
+
+<img width="929" height="34" alt="image" src="https://github.com/user-attachments/assets/b7ff5b89-320a-4a50-aea0-dbce5cbd03bb" />
+
+•	Ngspice simulator will ask for plots – 
+
+<img width="940" height="213" alt="image" src="https://github.com/user-attachments/assets/709aa293-e50b-4766-8b3f-679b4e4da556" />
+
+•	Graph will open
+
+<img width="622" height="391" alt="image" src="https://github.com/user-attachments/assets/f57a24d3-2a66-4fdc-a976-b6bf7ec932ad" />
+
+•	Can be seen that lower values of Vgs shows the quadratic behaviour whereas for higher values of Vgs it shows the linear behaviour
+
+•	Open – IdVgs for day2 – Keeping Vds constant for 1.8 V while sweeping Vgs from 0 to 1.8V with step of 0.2V
+
+<img width="572" height="440" alt="image" src="https://github.com/user-attachments/assets/2d27a7ae-91da-4afa-8205-ad49cdae6c99" />
+
+•	Will open ngspice and give command : plot -vdd#branch – Graph window will pop up
+
+<img width="940" height="583" alt="image" src="https://github.com/user-attachments/assets/5e8185a5-18c3-4855-8e24-37cae0048450" />
+
+### 20.	Labs Sky130 Vt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

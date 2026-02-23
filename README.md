@@ -629,11 +629,27 @@ To see id value from the graph, left click and go to the terminal window to see 
 <img width="620" height="389" alt="image" src="https://github.com/user-attachments/assets/d109c3cd-62d7-4a07-a261-7bade9015351" />
 
 ## CMOS Voltage Transfer Characteristics (VTC)
+
 ### 21.	MOSFET as a switch
 
+•	We have seen NMOS and PMOS with device physics point of view – need the change the perspective – focus on device properties for a MOSFET switch 
 
+•	Below is the MOS transistor – irrespective of the n-channel or p-channel – condition for turning on - |Vgs| > |Vt|
+
+<img width="940" height="316" alt="image" src="https://github.com/user-attachments/assets/6a5b3954-49b5-4235-8401-16515cb735ba" />
+
+<img width="509" height="107" alt="image" src="https://github.com/user-attachments/assets/bcedbd93-65b5-4754-8b94-0ae87d3d929c" />
+
+•	Let us connect NMOS and PMOS to have CMOS – Complementary MOS – NMOS is at Bottom – PMOS is at Top – Source of NMOS is connected to Vss (Ground) and PMOS is connected Vdd (Supply) – Drain of both MOS are connected and Output is taken from that junction – Gate of both MOS is connected and is considered as Vin
+
+<img width="390" height="368" alt="image" src="https://github.com/user-attachments/assets/2c88ebe4-f833-4760-9f02-dad336133f47" />
+
+•	When Vin = Vdd (High) ---> NMOS will turn on as |Vgs| > |Vt| satisfied for NMOS but not for PMOS – PMOS will turn off
+
+•	When Vin = Vss (Low) ---> PMOS will turn on as |Vgs| > |Vt| satisfied for PMOS but not for NMOS – NMOS will turn off
 
 ### 22.	Introduction to standard MOS voltage current parameteres
+
 
 
 

@@ -539,3 +539,25 @@ To see id value from the graph, left click and go to the terminal window to see 
 •	Id-Vgs with Vds = 1.8V – L = 1.2 µm (long channel) is more curved than L = 0.25 µm (short channel) – L = 0.25 µm is more linear than L = 1.2 µm – Comparison is done for same W/L
 
 <img width="940" height="347" alt="image" src="https://github.com/user-attachments/assets/97730a35-504c-4ace-ba5c-bffe42c8d864" />
+
+
+### 17.	Velocity saturation at lower and higher electric fields
+
+<img width="940" height="378" alt="image" src="https://github.com/user-attachments/assets/afdb1d5c-514f-4416-92eb-4b828f2d02c8" />
+
+•	Short channel – initial behaviour still follows the quadratic relation followed by linear region operation due to velocity saturation
+
+•	Concept of velocity saturation – for lower values of electric field, it follows the linear behaviour but after some critical electric field Ɛc, it tends to constants
+
+<img width="940" height="410" alt="image" src="https://github.com/user-attachments/assets/897cf83f-5300-43e5-b72b-a0313ea2da54" />
+
+•	Formula directly taken from the device physics
+
+•	Rederiving the drain current – come up with complex formula – not good for hand calculation – Need for simple model equation
+
+<img width="940" height="293" alt="image" src="https://github.com/user-attachments/assets/4e7e645e-ce22-4c1b-87cb-b6e35eeba298" />
+
+•	Region of operation for long channel device is 3 whereas for short channel device, velocity saturation is the 4th region of operation
+
+<img width="939" height="379" alt="image" src="https://github.com/user-attachments/assets/0ba17800-386e-4bba-b030-2ac2f543ebbd" />
+

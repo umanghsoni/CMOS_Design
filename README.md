@@ -628,20 +628,28 @@ To see id value from the graph, left click and go to the terminal window to see 
 
 <img width="620" height="389" alt="image" src="https://github.com/user-attachments/assets/d109c3cd-62d7-4a07-a261-7bade9015351" />
 
+## CMOS Voltage Transfer Characteristics (VTC)
+### 21.	MOSFET as a switch
 
 
 
+### 22.	Introduction to standard MOS voltage current parameteres
 
 
 
+### 23.	PMOS/NMOS drain current v/s drain drain voltage
 
 
 
+### 24.	Step 1 - Convert PMOS gate-source voltage to Vin
 
 
 
+### 25.	Step2 & Step3 – Convert PMOS and NMOS drain-source-voltage to vout
 
 
+
+### 26.	Step4 – Merge PMOS – NMOS load curves and plot VTC
 
 
 

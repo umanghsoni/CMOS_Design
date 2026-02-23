@@ -650,16 +650,43 @@ To see id value from the graph, left click and go to the terminal window to see 
 
 ### 22.	Introduction to standard MOS voltage current parameteres
 
+•	We try to have equivalent circuit when Vin = Vdd and Vin = Vss – Merge those two cases to derive the VTS of CMOS – VTC will be used to evaluate the delay of any cell – Here, cell is inverter but it could be any Logic gate
 
+•	Here connecting wires are used – they are not ideal, they are physical - they would have finite width, depth and length – Hence, resistance must be taken into consideration – It is not a regular resistor, it is having the non-linear function of your drain current – Here, ohm’s law is not applicable
 
+<img width="525" height="565" alt="image" src="https://github.com/user-attachments/assets/9c610296-7006-4e79-aad0-1f1e1418595d" />
+
+•	Turn off transistor is shown with open switch – when input is Vdd, NMOS is turn on – Output voltage Vout is zero – Capacitor totally discharge through Rn – Direct current path exist from Vout to Vss
+
+•	When Vin = 0, direct current flow from Vdd to Vout – Capacitor charge to Vdd – Vout = Vdd 
+
+•	Let us make names to the nodes for SPICE circuit 
+
+<img width="409" height="354" alt="image" src="https://github.com/user-attachments/assets/b2570fa4-8bbe-47ff-9129-120e352558c7" />
 
 ### 23.	PMOS/NMOS drain current v/s drain drain voltage
 
+•	Let us have some equation for VTC – what is input voltage provided and what is the output voltage received 
 
+<img width="370" height="408" alt="image" src="https://github.com/user-attachments/assets/9cc51c32-dfa4-4fba-adfd-a7216a95c655" />
+
+•	Pls be noted that IdsP and IdsN direction is opposite. Here NMOS curve is in first quadrant and PMOS is in the third quadrant. 
+
+<img width="633" height="342" alt="image" src="https://github.com/user-attachments/assets/493f639e-6487-4539-9afb-1291622d031d" />
+
+•	These two curves are very important to derive the VTC for the CMOS. 
 
 ### 24.	Step 1 - Convert PMOS gate-source voltage to Vin
 
+•	Here in CMOS inverter, we have Vin as input and Vout as output – Internal node voltages are not visible – CMOS inverter is only the function of Vin and Vds – At what value of Vin, what value of Vout is expected – This is needed for VTC
 
+•	Let us make VTC by considering any one of IdsN and IdsP – Convert IdsN v/s VdsN and IdsP v/s VdsP into IdsN v/s VdsP and IdsN v/s VdsN
+
+•	Convert the VgsN and VgsP into Vin – Considering IdsN from IdsN and IdsP
+
+<img width="611" height="474" alt="image" src="https://github.com/user-attachments/assets/f4d5fd78-ff2d-408e-9491-ee8cadf02c1c" />
+
+•	Here, IdsP is negative of IdsN. Hence Negative axis converted into positive ais. 
 
 ### 25.	Step2 & Step3 – Convert PMOS and NMOS drain-source-voltage to vout
 

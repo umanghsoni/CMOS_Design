@@ -624,8 +624,9 @@ To see id value from the graph, left click and go to the terminal window to see 
 
 ### 20.	Labs Sky130 Vt
 
+•	Finding the threshold voltage – take the tangent and extend the linear line on X axis – inceptor at X axis is the threshold voltage Vt
 
-
+<img width="620" height="389" alt="image" src="https://github.com/user-attachments/assets/d109c3cd-62d7-4a07-a261-7bade9015351" />
 
 
 

@@ -1,5 +1,4 @@
 # Basics of NMOS Drain current (Id) vs Drain-to-source Voltage (Vds)
-
 ## Introduction to Circuit Design and SPICE Simulation
 ### 0.	Why do we need SPICE simulations?
 

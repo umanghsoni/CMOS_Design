@@ -61,7 +61,7 @@
     - [40. Sky130 Noise margin labs](#40-sky130-noise-margin-labs)
 
 - [CMOS Power Supply and Device Variation Robustness Evaluation](#cmos-power-supply-and-device-variation-robustness-evaluation)
- - [Static behaviour evaluation -- CMOS inverter robustness -- Power supply variation](#static-behaviour-evaluation----cmos-inverter-robustness----power-supply-variation)
+  - [Static behaviour evaluation -- CMOS inverter robustness -- Power supply variation](#static-behaviour-evaluation----cmos-inverter-robustness----power-supply-variation)
     - [41. Smart SPICE simulation for power supply variations](#41-smart-spice-simulation-for-power-supply-variations)
     - [42. Advantages and disadvantages using low supply voltage](#42-advantages-and-disadvantages-using-low-supply-voltage)
     - [43. Sky130 Supply Variations Labs](#43-sky130-supply-variations-labs)

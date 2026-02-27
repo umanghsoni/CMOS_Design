@@ -44,6 +44,7 @@
     - [27. SPICE deck creation for CMOS inverter](#27-spice-deck-creation-for-cmos-inverter)
     - [28. SPICE simulation for CMOS inverter](#28-spice-simulation-for-cmos-inverter)
     - [29. Labs Sky130 SPICE simulation for CMOS](#29-labs-sky130-spice-simulation-for-cmos)
+  - [Static behavior evaluation -- CMOS inverter robustness -- Switching](#static-behavior-evaluation----cmos-inverter-robustness----switching)
     - [30. Switching Threshold, Vm](#30-switching-threshold-vm)
     - [31. Analytical expression of Vm](#31-analytical-expression-of-vm-as-a-function-of-wlp-and-wln)
     - [32. Analytical expression of W/L](#32-analytical-expression-of-wlp-and-wln-as-a-function-of-vm)

@@ -977,6 +977,177 @@ width
 -   Here, as shown in the figure, rise delay is more than fall delay
     which is not good design
 
+# CMOS Noise Margin robustness evaluation
+
+## Static behaviour evaluation -- CMOS inverter robustness -- Noise margin
+
+### 36. Introduction to noise margin
+
+-   Noise margin -- one of the important aspect for robustness of the
+    CMOS inverter -- related to cross talk and glitches -- often
+    adversely impacting the performance specifically in lower
+    technological nodes -- can be reduced or identified before hand
+    before identifying the noise margin of any logic gate
+
+-   How does CMOS noise margin vary and how different size of MOSFETs in
+    CMOS affect the noise margin?
+
+-   Let us take the case of Inverter where Output is the inverted form
+    of input -- 1 is given, 0 is getting at the output
+
+-   Consider the idle inverter -- Vdd/2 threshold -- slope at this point
+    -- change in output is visible but input is not changing causes the
+    slope infinite -- slope = dy/dx = (Change in Output)/(Change in
+    Input)
+
+> ![](/media_day4/media/image1.png)
+
+-   In the second VTC, slope is finite -- any input voltage between 0 to
+    VIL causes to have high output voltage i.e. Vdd or VOH (Here, Vdd
+    and VOH are same but in practical they are not same)
+
+-   Any input voltage between VIH to Vdd causes to have low output
+    voltage i.e. VOL.
+
+-   0 to VIL \--\> Low IP -- VIH to Vdd \--\> High IP --
+
+-   0 to VOL \--\> Low OP -- VIH to Vdd \--\> High OP
+
+### 37. Noise margin voltage parameters
+
+-   Revise -- Let us consider Vdd = 1 V -- Assume -- VIL = 0.25 V -- VIH
+    = 0.75V
+
+-   0 V to 0.25 V \--\> Low IP -- 0.75 V to 1 V \--\> High IP -- VOL
+    \--\> OP is low or close to 0 V or less than VIL (0.25 V) -- VOH
+    \--\> OP is high or close to Vdd or higher than VIH (0.75 V)
+
+-   Here, (1) VOL must be less than VIL (2) VOH must be higher than VIH
+    -- as when output of inverter is connected to input of next stage,
+    it can be recognised with correct logic levels.
+
+-   Let us consider the real practical situation
+
+-   On the VTC, consider the points when slope becomes -1, consider only
+    those points will act as VIL and VIH.
+
+> ![](/media_day4/media/image2.png)
+
+### 38. Noise margin equation and summary
+
+> • Let is plot the graph for noise margin
+
+-   Noise margin: Irrespectively of input and output, when the voltage
+    is in the range of (VOH - VIH) will be considered as high -- Same
+    way - Irrespectively of input and output, when the voltage is in the
+    range of (VIL - VOL) will be considered as low
+
+![](/media_day4/media/image3.png)
+
+-   Due to any reason, if noise generated causes to change the voltage
+    level within the range of noise margin will not affect
+
+-   In other words, noise margin is the range for tolerable range within
+    which voltage level remain intact.
+
+-   Let us see the noise bumps and how is it affected and when it would
+    be ignored
+
+-   Any noise voltage bum that goes in undefined area, its level will
+    not be predicted as either it will be considered as Low or High
+
+> ![](/media_day4/media/image4.png)
+
+-   Consider the voltage noise bumps are generated due to glitches --
+    Consider the blue line voltage is steady and is 0 V. -- Due to
+    glitch (1) noise bumps are in the margin will not adverse the logic.
+    It is considered as safe glitch (2) Bump height goes in undefined
+    region which affect the logic level and this glitch needs to be
+    fix. (3) Glitch height is to high that has alter the logic level
+    which also required to fix.
+
+### 39. Noise margin/Rail Error variation with respect to PMOS width
+
+-   Noise margin is about cascading gates, i.e., whether the next
+    inverter still interprets the level correctly, and that depends on
+    VOL, VOH, VIH and VIL (the slope = −1 points): (NMH = VOH - VIH) and
+    (NML = VIL - VOL)
+
+-   Noise margin \--\> How much noise the next gate can tolerate
+
+-   Rail error tells us how strong or weak the output logic level is
+
+-   If rail error is small \--\> Output is very close to ideal rails
+    \--\> Strong logic levels
+
+-   If rail error is large \--\> Output does not reach proper HIGH or
+    LOW \--\> Weak logic levels
+
+-   Rail Error = Output Swing Loss -- How far the output voltage is from
+    its ideal supply rail -- how far the "HIGH" output falls below Vdd
+    and how far the "LOW" output rises above 0
+
+-   Upper Rail = Vdd -- Lower Rail = 0 V (Ground)
+
+-   High Rail Error = Vdd -- VOH
+
+-   Low Rail Error = VOL -- 0
+
+-   Rail error is for only output levels - Rail error affect actual
+    noise margin of the next stage
+
+-   We have already seen the effect of (Wp/Lp) and (Wn/Ln) on VTC and
+    transient response. Here, we are going to see the same on the effect
+    of noise margin and Rail Error
+
+-   When we vary the size of PMOS as compared to NMOS, how does rail
+    error and noise margin vary which ultimately tells on robustness of
+    the CMOS
+
+> ![](/media_day4/media/image5.png)
+
+-   PMOS is the responsible for holding the High logic -- NMOS is the
+    responsible for holding the Low logic
+
+-   As width of PMOS is increased compared to NMOS, High rail error is
+    in creasing while low error is reduced
+
+-   For a particular switching threshold voltage, i.e. 1.2 V, Wp is
+    required to have twice of Wn but due to limitation in fabrication,
+    exact Width of Wp will not be obtained, Wp would be either 1.8 times
+    or 2.2 times of Wn. Even in this scenario, High Rail error and and
+    Low Rail Error will not be significantly obtained.
+
+![](/media_day4/media/image6.png)
+
+-   If any voltage level, that falls between Vdd and VOH, considered as
+    High
+
+-   If any voltage level, that falls between VOL and 0 V, considered as
+    Low
+
+-   If an inverter that can amplify the input signal, both MOS should be
+    in saturation for analog design
+
+> ![](/media_day4/media/image7.png)
+
+### 40. Sky130 Noise margin labs
+
+-   SPICE Simulation
+
+-   Open the day 4 file using the vim editor and apply dc sweep at input
+    from 0 to 1.8 with step of 0.01V
+
+![](/media_day4/media/image8.png)
+
+-   Run this file using the ngspice command and give appropriate command
+    to see visualise VTC
+
+![](/media_day4/media/image9.png)
+
+-   From the graph find the NMH = VOH -- VIH = 1.68 -- 0.98 = 0.70, NML
+    = VIL -- VOL = 0.78 -- 0.10 = 0.68, High Rail Error = 1.8 -- 1.68 =
+    0.12 V, Low Rail Error = VOL -- 0 = 0.10 V
 
 
 

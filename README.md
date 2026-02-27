@@ -1151,6 +1151,320 @@ width
     = VIL -- VOL = 0.78 -- 0.10 = 0.68, High Rail Error = 1.8 -- 1.68 =
     0.12 V, Low Rail Error = VOL -- 0 = 0.10 V
 
+# CMOS power supply and device variation robustness evaluation
+
+## Static behaviour evaluation -- CMOS inverter robustness -- Power supply variation
+
+### 41. Smart SPICE simulation for power supply variations
+
+-   While considering the CMOS robustness, power supply scaling is very
+    important -- When technological node is scaled down from 250 nm to
+    10 nm to 35 nm, power supply scaling is very essential -- Lower
+    technological node, power supply value should be reduced -- CMOS is
+    expected to behave as it was behaving before (Compared with lower
+    technological node with bigger technological node)
+
+-   We will perform one experiment using the SPICE simulation and aim is
+    to that CMOS behaviour should not change
+
+![](/media_day5/media/image1.png)
+
+-   Here, width of PMOS is kept higher than NMOS and supply voltage is
+    reduced and its VTC, rise delay, fall delay can be found -- In this
+    experiment, Wn and Wp is kept constant and only supply voltage
+    changes
+
+-   Smart Simulation required to be done as to have all the VTC have to
+    be on same graph -- Netlist will remain same but scripting will
+    change
+
+![](/media_day5/media/image2.png)
+
+-   In the script file, loop will be iterated and for each iteration,
+    power supply value is subtracted by 0.5 V -- Starting with 2.5, will
+    go in each iteration to 2.0 V, 1.5 V, 1.0 V, and 0.5 V
+
+![](/media_day5/media/image3.png)
+
+-   Here, 5 DC plots will be on the new pop-up window -- Anything
+    between .control and .endc allows to do scripting -- In case of
+    doing more complex simulation, scripting file required to write as
+    per functionality
+
+-   Run the file using the ngspice command and give appropriate command
+
+> ![](/media_day5/media/image4.png)
+
+-   It is clearly seen that, there are five VTC for five different power
+    supply starting from 2.5 V to 0.5 V.
+
+### 42. Advantages and disadvantages using low supply voltage
+
+-   After getting the 5 VTC for five different supply voltages, first
+    observation is that, even for supply voltage of 0.5 V, behaviour of
+    CMOS is not changed
+
+-   Find the first parameter -- how much gain is obtained when supply
+    voltage is 2.5 V compared to the supply voltage 0.5 V
+
+-   Gain -- Ratio of change in Output voltage to change in input voltage
+
+-   How to have the gain value? -- On the VTC, consider the points where
+    slope is -1 -- find the coordinates of those points and find dy/dx
+    (Gain)
+
+> ![](/media_day5/media/image5.png)
+
+-   Here, there is an advantage of using the 0.5 V as supply voltage but
+    there is also one major disadvantage.
+
+-   Another advantage -- Energy -- How much energy CMOS inverter will
+    consume -- (½)CV^2^ -- here, output load capacitance (capacitor
+    through which inverter can charge or discharge) is fix and V is
+    getting change based on the supply voltage
+
+![](/media_day5/media/image6.png)
+
+-   Significant benefit in reduction of energy \~90% for supply voltage
+    0.5 V -- again this low voltage supply has disadvantage that causes
+    not used
+
+-   For supply voltage of 0.5 V, Charging the output load capacitance,
+    0.5 V supply is not enough -- Device even can't charge and discharge
+    complete load capacitor due to not enough rise time to charge the
+    device upto 0.5 V -- Here, device is not as fast as expected --
+    Here, input clock frequency required to decreased that causes to
+    increase the time period which eventually give time to full charge
+    output load capacitor and discharge full load capacitor
+
+-   In case of supply voltage 2.5 V, device has enough time for given
+    input frequency to fully charge and discharge
+
+-   In compared to supply voltage 2.5 V, supply voltage 1.0 V takes time
+    to get the output capacitor to get loaded -- i.e. rise delay and
+    fall delay is higher in case of supply voltage 1.0 V
+
+> ![](/media_day5/media/image7.png)
+
+### 43. Sky130 Supply Variations Labs
+
+-   Open the SPICE file for day 5 and make any changes in scripting
+    section if find necessary
+
+![](/media_day5/media/image8.png)
+
+-   Here, 4 iteration will be applied with each iteration is reduced
+    with supply voltage of 0.3 V -- Based on the number of iterations,
+    in the following image change is required.
+
+![](/media_day5/media/image9.png)
+
+-   Here, VTC for all different supply will automatically pop-up and
+    find the gain, For switching threshold voltage -- Need to click on
+    the VTC points and coordinates will automatically appear on the
+    ngspice simulator on the terminal window.
+
+> ![](/media_day5/media/image10.png)
+
+-   Coordinates of the VTS for supply voltage 1.8 V is below to find
+    Gain
+
+![](/media_day5/media/image11.png)
+
+## Static behaviour evaluation -- CMOS inverter robustness -- Device variation
+
+### 44. Sources of variation -- Etching process
+
+-   Here, we are trying to find the source of variation that causes the
+    device behaviour to change
+
+-   Need to find the exact parameters that vary the width and length of
+    CMOS inverter
+
+-   First source of variation -- Etching process -- it is fabrication
+    step -- that define the length and width of the device along with
+    entire structure -- that directly affect the delay
+
+![](/media_day5/media/image12.png)
+
+-   Here, the shape of each metal layer is obtained using the etching
+    process as shown in the layout design of CMOS -- Blue colour metal
+    layer: Metal lines for Supply, Ground, Input and Output -- Red
+    colour metal layer -- poly silicon area form gates of CMOS has some
+    width and height -- Green colour metal layer: P diffusion region
+    with some height and width -- Yellow colour metal layer: N diffusion
+    area with some height and width -- all metal layer are obtained
+    using the etching process
+
+-   Let us consider the inverter chain -- end points would have
+    different circuit
+
+![](/media_day5/media/image13.png)
+
+-   Such variation happen a lot in chain of inverter which fabricated on
+    a chip -- This variation is not only on small area but chip is
+    fabricated on larger area and each device would have different
+    variation in terms of W and L -- such distortion is not repetitive
+
+![](/media_day5/media/image14.png)
+
+-   Here, inverter connected to end points have different structures --
+    they are connected to flip flops -- Due to this, structural
+    variation at the end point devices/inverters would have different
+    than the structural variation in the devices/inverter which are in
+    the middle
+
+-   These structural variations (in the fabrication) impact the device
+    and inverter properties -- Below is equation which tell us how such
+    variation impact drain current
+
+![](/media_day5/media/image15.png)
+
+-   Drain current has dependency on W and L of the device -- Question to
+    answer is how drain current causes the delay in inverter when
+    variation in W and L is present
+
+### 45. Sources of variation -- oxide thickness
+
+-   Along with variation in W and L of device, oxide thickness also
+    impact the behaviour of the device -- Oxide thickness is directly
+    connected to the capacitance present in drain current
+
+-   If thickness is not uniform -- changes in thickness -- variation in
+    capacitance -- variation in drain current -- variation in device
+    behaviour
+
+![](/media_day5/media/image16.png)
+
+-   Let us see the how real oxidation process differ than expected
+
+![](/media_day5/media/image17.png)
+
+-   Consider the effect of this variation when large number of
+    device/inverters are to be fabricated -- their cumulative effect may
+    change the behaviour of entire circuit -- Again, consider the end
+    point inverters are connected to other types of circuits due to
+    which their actual oxide thickness profile might be different than
+    those are in the middle part
+
+![](/media_day5/media/image18.png)
+
+-   Below is the simplification which shows the in mathematical way the
+    dependence of oxide thickness on current and device behaviour -- tox
+    is the oxide thickness -
+
+![](/media_day5/media/image19.png)
+
+### 46. Smart SPICE simulation for device variations
+
+-   We will perform SPICE simulation
+
+-   Open the spice simulation file for device variation
+
+-   See the PMOS is strong and NMOS is weak based on the width of both
+    MOS and apply DC sweep for changing the input from 0 to 1.8 V with
+    step of 0.01 V
+
+> ![](/media_day5/media/image20.png)
+
+-   Run this using ngspice and give command to have the graph
+
+> ![](/media_day5/media/image21.png)
+
+-   
+
+-   Strong PMOS -- least resistance by PMOS -- due to wider width of
+    PMOS -- low resistive path for output capacitor to charge -- Charge
+    the output capacitor fast
+
+-   Weak NMOS -- Highest resistance by NMOS
+
+-   Wide width -- Strong MOS
+
+-   Narrow width -- Weak MOS
+
+-   Assume: 1.875 µm is maximum width can be fabricated -- 0.375 µm is
+    the smallest width can be fabricated
+
+![](/media_day5/media/image22.png)
+
+-   Here, we simulate VTC by changing the width of both MOS of the
+    inverter -- we will take dimension to extreme to verify the
+    behaviour functionality
+
+-   In the script section of the file, total 5 iterations will be
+    applied with each loop will change the width of both MOS by 0.375µm
+
+-   Written between '.control' and '.endc' is considered as script file
+    -- Pls ensure to have five dc simulation for five VTC
+
+![](/media_day5/media/image23.png)
+
+-   Here, dc1 is for strong PMOS and weak NMOS whereas dc5 is for weak
+    PMOS and strong NMOS
+
+![](/media_day5/media/image24.png)
+
+### 47. Conclusion
+
+-   So far we have seen the robust behaviour of CMOS against switching
+    threshold, noise margin, power supply variation and device variation
+    (oxide thickness and etching cause the variation in W and L)
+
+-   CMOS is insensitive to above variation
+
+-   Here, we continue the discussion from stronger PMOS with weak NMOS
+    to weaker PMOS to stronger NMOS
+
+-   Two main parameters to be quantified -- Noise margin and switching
+    threshold
+
+-   Here switching threshold variation is \~0.65 V based on threshold
+    difference of dc1 and dc5
+
+![](/media_day5/media/image25.png)
+
+-   If you design the inverter for the dc2 and due to device variation,
+    it slightly deviated towards dc3 or dc1, there is no drastic change
+    in threshold -- very minimal shift in threshold and behaviour of
+    CMOS remain intact
+
+-   Another is Low rail error and High rail which are very important
+    Here, we are going to change the (W/L) of NMOS and (W/L) of PMOS and
+    we see how much the Rail errors vary
+
+-   These rail errors play significant role in improving the noise
+    margin for the next stage input
+
+-   Again, the shift is very minimal again showing the robust
+    performance against device variations
+
+-   To sum up, due to device variation or supply variation, behaviour
+    and operation of CMOS remain intact -- due to this, it can be used
+    to build any kind of logic gate
+
+### 48. Sky130 Device Variation Labs
+
+-   Let us go for SPICE simulation
+
+-   Open day 5 device variation file
+
+-   Check the PMOS is strong and NMOS is weak based on width of both MOS
+
+![](/media_day5/media/image26.png)
+
+-   Run this file using ngspice and give the command to have pop-up
+    window for VTC graph
+
+![](/media_day5/media/image27.png)
+
+-   From the graph, it is clearly visible that, high holding time is
+    more for PMOS as compared to NMOS which implies PMOS is stronger
+    than NMOS -- due to that switching threshold has shifted towards the
+    right
+
+-   For finding the switching threshold, draw a line of 45 degree and
+    find the intersection point
 
 
 

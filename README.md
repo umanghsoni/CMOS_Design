@@ -711,16 +711,11 @@ To see id value from the graph, left click and go to the terminal window to see 
 
 <img width="940" height="581" alt="image" src="https://github.com/user-attachments/assets/45106a5b-9744-4943-a1a3-fd59364340bd" />
 
+# CMOS Switching threshold and dynamic simulations
 
-**NgspiceSky130**
+## Voltage transfer characteristics -- SPICE simulations
 
-**[Day 3]**
-
-**CMOS Switching threshold and dynamic simulations**
-
-Voltage transfer characteristics -- SPICE simulations
-
-27. SPICE deck creation for CMOS inverter
+### 27. SPICE deck creation for CMOS inverter
 
 -   SPICE Deck -- Connectivity information about the netlist -- has
     input provided to the simulation -- has tap point from where the
@@ -742,7 +737,7 @@ Voltage transfer characteristics -- SPICE simulations
 -   Anything start 3 starts \*\*\* are comments -- MOSFET sequence --
     Drain, Gate, Substrate and Source
 
-28\. SPICE simulation for CMOS inverter
+### 28. SPICE simulation for CMOS inverter
 
 -   Model file has all technological parameters, foundry level
     parameters -- it comprises all both PMOS and NMOS -- Both MOS
@@ -763,7 +758,7 @@ Voltage transfer characteristics -- SPICE simulations
 -   Difference -- Graph with same W/L is not centred -- Graph with
     higher W/L for PMOS is centred
 
-29. Labs Sky130 SPICE simulation for CMOS
+### 29. Labs Sky130 SPICE simulation for CMOS
 
 -   Open the SPICE netlist file for the VTC characteristic
 
@@ -830,10 +825,10 @@ Voltage transfer characteristics -- SPICE simulations
 -   For fall delay -- consider the falling edge of the output -- apply
     same method as applied for rise delay
 
-Static behavior evaluation -- CMOS inverter robustness -- Switching
+## Static behavior evaluation -- CMOS inverter robustness -- Switching
 Threshold
 
-30. Switching Threshold, Vm
+### 30. Switching Threshold, Vm
 
 -   Let us analyse the CMOS Inverter with different W/L ratio of both
     PMOS and NMOS
@@ -865,7 +860,7 @@ Threshold
 -   Derive the Vm value from the give ratio of W/L of both MOS
     transistor -- OR -- Find the W/L of MOS from the set Vm
 
-31. Analytical expression of Vm as a function of (W/L)p and (W/L)n
+### 31. Analytical expression of Vm as a function of (W/L)p and (W/L)n
 
 -   Switching threshold condition -- Vin = Vout -- Vgs = Vds -- both MOS
     in saturation = Direction os IdsN and IdsP are opposite and equal
@@ -901,7 +896,7 @@ Threshold
 -   In the above equation, put the value of technological parameters
     like W, L, µ, Cox, etc. to have R and from R we have Vm.
 
-32. Analytical expression of (W/L)p and (W/L)n as a function of Vm
+### 32. Analytical expression of (W/L)p and (W/L)n as a function of Vm
 
 -   Here, we set the Vm first and based on set value of Vm -- Find the
     value of W/L for both NMOS and PMOS to meet the Vm requirement
@@ -914,7 +909,7 @@ Threshold
 
 ![](/media_day3/media/image22.png)
 
-33. Static and dynamic simulation of CMOS inverter
+### 33. Static and dynamic simulation of CMOS inverter
 
 -   Here, we are going to change the ration of (W/L) of NMOS and (W/L)
     of PMOS and we see how the threshold value can change by changing
@@ -937,7 +932,7 @@ Threshold
 
 ![](/media_day3/media/image24.png)
 
-34\. Static and dynamic simulation of CMOS inverter with increased PMOS
+### 34. Static and dynamic simulation of CMOS inverter with increased PMOS
 width
 
 -   Here, we are going to change the ration of (W/L) of NMOS and (W/L)
@@ -960,7 +955,7 @@ width
 
 -   Here, Vm is the threshold where Vin = Vout of CMOS inverter
 
-35\. Applications of CMOS inverter in clock network and STA
+### 35. Applications of CMOS inverter in clock network and STA
 
 -   For different set of (W/L) of both NMOS and PMOS, we have different
     set for rise time, fall time and threshold voltage.

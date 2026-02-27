@@ -65,6 +65,7 @@
     - [41. Smart SPICE simulation for power supply variations](#41-smart-spice-simulation-for-power-supply-variations)
     - [42. Advantages and disadvantages using low supply voltage](#42-advantages-and-disadvantages-using-low-supply-voltage)
     - [43. Sky130 Supply Variations Labs](#43-sky130-supply-variations-labs)
+  - [Static behaviour evaluation -- CMOS inverter robustness -- Device variation](#static-behaviour-evaluation----cmos-inverter-robustness----device-variation)
     - [44. Sources of variation -- Etching process](#44-sources-of-variation----etching-process)
     - [45. Sources of variation -- oxide thickness](#45-sources-of-variation----oxide-thickness)
     - [46. Smart SPICE simulation for device variations](#46-smart-spice-simulation-for-device-variations)

@@ -7,7 +7,7 @@
     - [2. Strong inversion and threshold voltage](#2-strong-inversion-and-threshold-voltage)
     - [3. Threshold voltage with positive substrate potential](#3-threshold-voltage-with-positive-substrate-potential)
 
-- [NMOS Resistive Region and Saturation Region of Operation](#nmos-resistive-region-and-saturation-region-of-operation)
+  - [NMOS Resistive Region and Saturation Region of Operation](#nmos-resistive-region-and-saturation-region-of-operation)
     - [4. Resistive region of operation with small drain-source voltage](#4-resistive-region-of-operation-with-small-drain-source-voltage)
     - [5. Drift current theory](#5-drift-current-theory)
     - [6. Drain current model for linear region of operation](#6-drain-current-model-for-linear-region-of-operation)
@@ -15,7 +15,7 @@
     - [8. Pinch-off region condition](#8-pinch-off-region-condition)
     - [9. Drain current model for saturation region of operation](#9-drain-current-model-for-saturation-region-of-operation)
 
-- [Introduction to SPICE](#introduction-to-spice)
+  - [Introduction to SPICE](#introduction-to-spice)
     - [10. Basic SPICE setup](#10-basic-spice-setup)
     - [11. Circuit description in SPICE syntax](#11-circuit-description-in-spice-syntax)
     - [12. Define technology parameters](#12-define-technology-parameters)

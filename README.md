@@ -31,7 +31,7 @@
     - [19. Labs sky130 Id-Vgs](#19-labs-sky130-id-vgs)
     - [20. Labs Sky130 Vt](#20-labs-sky130-vt)
 
-- [CMOS Voltage Transfer Characteristics (VTC)](#cmos-voltage-transfer-characteristics-vtc)
+  - [CMOS Voltage Transfer Characteristics (VTC)](#cmos-voltage-transfer-characteristics-vtc)
     - [21. MOSFET as a switch](#21-mosfet-as-a-switch)
     - [22. Introduction to standard MOS voltage current parameters](#22-introduction-to-standard-mos-voltage-current-parameters)
     - [23. PMOS/NMOS drain current vs drain voltage](#23-pmosnmos-drain-current-vs-drain-drain-voltage)

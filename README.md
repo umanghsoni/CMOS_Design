@@ -72,8 +72,6 @@
     - [47. Conclusion](#47-conclusion)
     - [48. Sky130 Device Variation Labs](#48-sky130-device-variation-labs)
 
-- [39. Noise margin/Rail Error variation with respect to PMOS width](#39-noise-marginrail-error-variation-with-respect-to-pmos-width)
-
 # Basics of NMOS Drain current (Id) vs Drain-to-source Voltage (Vds)
 ## Introduction to Circuit Design and SPICE Simulation
 ### 0.	Why do we need SPICE simulations?

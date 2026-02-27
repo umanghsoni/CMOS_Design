@@ -1441,10 +1441,6 @@ width
 
 -   Run this using ngspice and give command to have the graph
 
-> ![](/media_day5/media/image21.png)
-
--   
-
 -   Strong PMOS -- least resistance by PMOS -- due to wider width of
     PMOS -- low resistive path for output capacitor to charge -- Charge
     the output capacitor fast
